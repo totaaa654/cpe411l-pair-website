@@ -1,0 +1,72 @@
+body {
+  background-color: #fff9f0; /* Soft cream background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.letter-container {
+  background-color: white;
+  max-width: 600px;
+  border: 3px solid #ffb1b1; /* Soft Pink Border */
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #ffb1b1;
+  overflow: hidden;
+}
+
+.letter-header, .closing-header {
+  background-color: #ffb1b1;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.letter-body {
+  padding: 30px;
+  color: #d66d6d; /* Darker pink for text */
+  line-height: 1.6;
+}
+
+.uni-title {
+  color: #ff5e5e;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ffb1b1;
+}
+
+.pink-line {
+  border: 0;
+  height: 1px;
+  background: #ffb1b1;
+  margin: 20px 0;
+}
+
+.faq-section {
+  background-color: #fff0f0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.answer {
+  margin-left: 20px;
+  font-style: italic;
+  color: #a35353;
+}
+
+.closing-box {
+  margin-top: 30px;
+  border: 2px solid #ffb1b1;
+  border-radius: 8px;
+}
