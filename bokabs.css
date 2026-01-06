@@ -1,0 +1,75 @@
+body {
+  background-color: #2b1d0e; /* Dark background from reference */
+  font-family: 'Courier New', Courier, monospace;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The tab bar at the top */
+.tabs-container {
+  display: flex;
+  border: 1px solid #ff69b4; /* Pink Border */
+  width: 100%;
+  max-width: 700px;
+}
+
+.tab-item {
+  padding: 10px 20px;
+  color: #ff69b4; /* Pink Text */
+  border-right: 1px solid #ff69b4;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tab-item.active {
+  background-color: #4a3a2a;
+  text-decoration: underline;
+}
+
+/* The box containing the vocab */
+.main-content {
+  border: 1px solid #ff69b4;
+  border-top: none;
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #ffff00; /* Neon Yellow from screenshot */
+  margin-top: 0;
+}
+
+.entry {
+  margin-bottom: 25px;
+}
+
+.term {
+  color: #ffff00; /* Yellow terms */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.definition {
+  color: #ffffff; /* White definitions */
+  margin-left: 30px;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+/* The button at the bottom */
+.orpop-btn {
+  background: transparent;
+  border: 1px solid #ffff00;
+  color: #ffff00;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.orpop-btn:hover {
+  background: #ffff00;
+  color: #2b1d0e;
+}
