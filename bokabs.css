@@ -1,18 +1,29 @@
+/* --- GLOBAL STYLES --- */
 body {
-  background-color: #2b1d0e; /* Dark background from reference */
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #2b1d0e; /* Dark chocolate/black from reference */
+  font-family: 'Courier New', Courier, monospace; /* Retro typewriter feel */
   padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #ffff00; /* Default to neon yellow */
 }
 
-/* The tab bar at the top */
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* --- TAB LOGIC (HIDDEN) --- */
+input[type="radio"] {
+  display: none; /* Hide the actual radio circles */
+}
+
+/* --- TAB NAVIGATION --- */
 .tabs-container {
   display: flex;
   border: 1px solid #ff69b4; /* Pink Border */
-  width: 100%;
-  max-width: 700px;
+  background-color: #3d2b1a;
 }
 
 .tab-item {
@@ -20,27 +31,51 @@ body {
   color: #ff69b4; /* Pink Text */
   border-right: 1px solid #ff69b4;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.tab-item.active {
-  background-color: #4a3a2a;
+.tab-item:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+}
+
+/* --- ACTIVE TAB STYLING --- */
+/* This highlights the tab label when the hidden radio button is checked */
+#tab-1:checked ~ .tabs-container label[for="tab-1"],
+#tab-2:checked ~ .tabs-container label[for="tab-2"],
+#tab-3:checked ~ .tabs-container label[for="tab-3"],
+#tab-4:checked ~ .tabs-container label[for="tab-4"] {
+  background-color: #ff69b4;
+  color: #ffffff;
   text-decoration: underline;
 }
 
-/* The box containing the vocab */
+/* --- MAIN CONTENT AREA --- */
 .main-content {
   border: 1px solid #ff69b4;
   border-top: none;
-  width: 100%;
-  max-width: 700px;
   padding: 30px;
-  box-sizing: border-box;
+  background: linear-gradient(180deg, #3d2b1a 0%, #2b1d0e 100%);
 }
 
 .title {
   color: #ffff00; /* Neon Yellow from screenshot */
   margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* --- VOCABULARY LIST LOGIC --- */
+.vocab-section {
+  display: none; /* Hide all sections by default */
+}
+
+/* Show the specific section when the corresponding radio is checked */
+#tab-1:checked ~ .main-content #content-1,
+#tab-2:checked ~ .main-content #content-2,
+#tab-3:checked ~ .main-content #content-3,
+#tab-4:checked ~ .main-content #content-4 {
+  display: block;
 }
 
 .entry {
@@ -51,22 +86,25 @@ body {
   color: #ffff00; /* Yellow terms */
   font-weight: bold;
   font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .definition {
-  color: #ffffff; /* White definitions */
+  color: #ffffff; /* White definitions for readability */
   margin-left: 30px;
   font-size: 0.95rem;
   margin-top: 5px;
 }
 
-/* The button at the bottom */
+/* --- BUTTONS --- */
 .orpop-btn {
   background: transparent;
   border: 1px solid #ffff00;
   color: #ffff00;
   padding: 8px 16px;
   cursor: pointer;
+  font-family: inherit;
+  margin-top: 10px;
 }
 
 .orpop-btn:hover {
