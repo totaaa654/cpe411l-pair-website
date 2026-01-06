@@ -1,0 +1,129 @@
+/* --- GLOBAL STYLES --- */
+body {
+  background-color: #fff9f0; /* Soft cream background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+/* --- LAYOUT WRAPPER --- */
+.page-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* --- SIDE PHOTOS --- */
+.side-photo img {
+  width: 180px;
+  border: 4px solid #ffb1b1;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px #ffb1b1;
+  background-color: white;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.side-photo img:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+}
+
+/* Tilt effects for aesthetic */
+.left img { transform: rotate(-7deg); margin-top: 60px; }
+.right img { transform: rotate(7deg); margin-top: 180px; }
+
+/* --- LETTER CONTAINER --- */
+.letter-container {
+  background-color: white;
+  flex: 1;
+  max-width: 600px;
+  border: 3px solid #ffb1b1;
+  border-radius: 10px;
+  box-shadow: 8px 8px 0px #ffb1b1;
+  overflow: hidden;
+}
+
+.letter-header, .closing-header {
+  background-color: #ffb1b1;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.letter-body {
+  padding: 30px;
+  color: #d66d6d;
+  line-height: 1.6;
+}
+
+.uni-title {
+  color: #ff5e5e;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 10px 0 20px 0;
+}
+
+.welcome-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #ffb1b1;
+  margin: 0;
+}
+
+.pink-line {
+  border: 0;
+  height: 1px;
+  background: #ffb1b1;
+  margin: 25px 0;
+}
+
+.section-title {
+  color: #ff5e5e;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+  background-color: #fff0f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.answer {
+  margin-left: 15px;
+  font-style: italic;
+  color: #a35353;
+  margin-bottom: 15px;
+}
+
+/* --- CLOSING BOX --- */
+.closing-box {
+  margin-top: 30px;
+  border: 2px solid #ffb1b1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.closing-box p {
+  padding: 15px;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .side-photo { display: none; } /* Hide photos on small screens */
+}
