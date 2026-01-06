@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="tl">
 <head>
   <meta charset="UTF-8">
-  <title>Pink Navbar</title>
+  <title>Navbar + Content</title>
   <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
 
+  <!-- Fixed navbar -->
   <nav class="navbar">
     <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">VOKABS</a></li>
-      <li><a href="#">KARAKTER</a></li>
-      <li><a href="#">ABOUT</a></li>
+      <li><a href="home.html" target="contentFrame">HOME</a></li>
+      <li><a href="vokabs.html" target="contentFrame">VOKABS</a></li>
+      <li><a href="karakter.html" target="contentFrame">KARAKTER</a></li>
+      <li><a href="about.html" target="contentFrame">ABOUT</a></li>
     </ul>
   </nav>
+
+  <!-- Content area below navbar -->
+  <iframe name="contentFrame" src="home.html"></iframe>
+  <iframe name="contentFrame" src="karakter.html"></iframe>
 
 </body>
 </html>

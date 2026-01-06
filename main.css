@@ -1,11 +1,18 @@
-body {
+html, body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* prevents scrollbars */
 }
 
 .navbar {
-  background-color: #ff8fcf; /* pink */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff8fcf;
   padding: 12px 20px;
+  z-index: 100;
 }
 
 .navbar ul {
@@ -24,4 +31,12 @@ body {
 
 .navbar a:hover {
   text-decoration: underline;
+}
+
+/* iframe fills the rest of viewport */
+iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 70px); /* fill viewport minus navbar */
+  border: none;
 }

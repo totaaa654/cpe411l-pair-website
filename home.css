@@ -1,0 +1,94 @@
+/* Make sure home.html fills the iframe completely */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* prevent extra scroll */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5a004f;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* transparent so gradient is visible */
+}
+
+/* Moving pink gradient background */
+body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center,
+    #ffe6f2 0%,       /* base color */
+    #ff9ed9 20%,
+    #ff70c1 40%,
+    #ffaddd 60%,
+    transparent 80%
+  );
+  animation: swirl 6s infinite linear; /* faster, visible swirl */
+  opacity: 0.9;
+  z-index: -1;
+}
+
+@keyframes swirl {
+  0%   { transform: rotate(0deg) translate(50px,50px); }
+  50%  { transform: rotate(180deg) translate(-50px,-50px); }
+  100% { transform: rotate(360deg) translate(50px,50px); }
+}
+
+/* Container for text and image */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 90%;
+  padding: 60px 20px;
+  z-index: 1; /* above gradient background */
+  background: transparent; /* allow gradient to show through */
+}
+
+/* Text styling */
+.text h1 {
+  font-size: 4rem; /* bigger heading */
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.5rem; /* bigger paragraph */
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Image styling */
+.image img {
+  width: 300px; /* adjust size as needed */
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image img {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .text h1 {
+    font-size: 3rem;
+  }
+
+  .text p {
+    font-size: 1.2rem;
+  }
+}
