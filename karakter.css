@@ -1,0 +1,70 @@
+/* Reset default spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe6f2;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for orbiting */
+.orbit-container {
+  position: relative;
+  width: 600px;   /* bigger to fit full orbit */
+  height: 600px;  /* bigger to fit full orbit */
+  overflow: visible; /* allow images to go outside container */
+}
+
+/* Center point */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #ff8fcf;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Orbit wrapper */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotate 6s linear infinite;
+  transform-origin: 0 0; /* center of rotation */
+}
+
+/* Second orbit slower */
+.orbit.jozza {
+  animation-duration: 10s; /* slower orbit */
+}
+
+/* Images inside orbit */
+.orbit img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  position: absolute;
+  top: -50%;  /* center image on orbit */
+  left: 0;    /* start at right of container */
+}
+
+/* Animation */
+@keyframes rotate {
+  0% { transform: rotate(0deg) translateX(var(--distance)) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(var(--distance)) rotate(-360deg); }
+}
+
+/* Orbit distances */
+.orbit.luis { --distance: 180px; }
+.orbit.jozza { --distance: 250px; }
+
